@@ -10,7 +10,7 @@ $ python3 commentscraper.py ./output/projects.txt > ./output/comments.csv
 
 the file projectIDs.txt contains only a list of project id's extracted from the allProjects.csv dataset.
 
-project_info.csv contains all information of a project extracted from the json file downloaded from the scratch website. 
+project_info.csv (https://drive.google.com/file/d/1iGch5aAoU156wTFUgSvn9tWx3rDdRsy2/view?usp=sharing) contains all information of a project extracted from the json file downloaded from the scratch website. 
 This step is necessary to obtain the usernames, which is required in the next step to download comments.
 
 projects.txt contains a list of projects with the usernames attached.
