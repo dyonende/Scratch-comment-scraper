@@ -27,58 +27,61 @@ with open(sys.argv[1]) as file:
         counter = 1
         stepsize = 40
         end = False
-    
+        comments = 0
+        
         line = line.split(' ')
         try:
             user = line[0]
             project = line[1]
+            comments = int(line[2])
         except KeyboardInterrupt:
                 sys.exit()
         except:
-            print("input line format error, file=sys.stderr")
-
-        while end is False:
-            try:
-                url = "https://api.scratch.mit.edu/users/"+user+"/projects/"+project+"/comments?offset="+offset+"&limit="+str(stepsize)
-                r = requests.get(url, allow_redirects=True)
-                if str(r.content).find("[]") >= 0:
-                    end = True
-                else:
-                    file = r.content
-                    data = json.loads(file)
-                    try:
-                        for line in data:
-                            id = line['id']
-                            parent_id = line['parent_id']
-                            commentee_id = line['commentee_id']
-                            content = "\"" + line['content'] + "\""
-                            date_created = line['datetime_created']
-                            date_modified = line['datetime_modified']
-                            visibility = line['visibility']
-                            author_id = line['author']['id']
-                            author_username = "\"" + line['author']['username'] + "\""
-                            print(  project,
-                                    user,
-                                    author_id,
-                                    author_username,
-                                    id,
-                                    parent_id,
-                                    commentee_id,
-                                    date_created,
-                                    date_modified,
-                                    visibility,
-                                    content,
-                                    
-                                    sep=';'
-                                )
-                    except KeyboardInterrupt:
-                        sys.exit()
-                    except:
-                        print("parse error: ", user, project, file=sys.stderr)
-                    oscounter+=stepsize
-                    offset = str(oscounter)
-                counter+=1
-            except KeyboardInterrupt:
-                sys.exit()
-            except:
-                print("failure", user, project, file=sys.stderr)
+            print("input line format error", file=sys.stderr)
+            
+        if comments > 0:
+            while end is False:
+                try:
+                    url = "https://api.scratch.mit.edu/users/"+user+"/projects/"+project+"/comments?offset="+offset+"&limit="+str(stepsize)
+                    r = requests.get(url, allow_redirects=True)
+                    if str(r.content).find("[]") >= 0:
+                        end = True
+                    else:
+                        file = r.content
+                        data = json.loads(file)
+                        try:
+                            for line in data:
+                                id = line['id']
+                                parent_id = line['parent_id']
+                                commentee_id = line['commentee_id']
+                                content = "\"" + line['content'] + "\""
+                                date_created = line['datetime_created']
+                                date_modified = line['datetime_modified']
+                                visibility = line['visibility']
+                                author_id = line['author']['id']
+                                author_username = "\"" + line['author']['username'] + "\""
+                                print(  project,
+                                        user,
+                                        author_id,
+                                        author_username,
+                                        id,
+                                        parent_id,
+                                        commentee_id,
+                                        date_created,
+                                        date_modified,
+                                        visibility,
+                                        content,
+                                        
+                                        sep=';'
+                                    )
+                        except KeyboardInterrupt:
+                            sys.exit()
+                        except:
+                            print("parse error: ", user, project, file=sys.stderr)
+                        oscounter+=stepsize
+                        offset = str(oscounter)
+                    counter+=1
+                except KeyboardInterrupt:
+                    sys.exit()
+                except:
+                    print("failure", user, project, file=sys.stderr)
