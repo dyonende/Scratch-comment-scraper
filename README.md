@@ -1,6 +1,6 @@
 # Scratch Scraper
 
-**This repository hosts all the code that was used for *Scraping Scratch: A Dataset of Comments and their Sentiment (2020)* by Dyon van der Ende.**
+**This repository hosts all the code that was used for the bachelor's thesis *Scraping Scratch: A Dataset of Comments and their Sentiment (2020)* by Dyon van der Ende.**
 
 The goal of this research was to create a dataset that contains Scratch comments labelled with sentiment.
 The data can be found here: 
@@ -25,6 +25,8 @@ Therefore, instead of heaving a number of comments as input, it takes a file wit
 
 ### langanote.py
 This program has as input a csv file with the output of commentscraper.py or replyscraper.py. It analyses every comment with pycld2 and adds the language of the comment in a new column, also in csv format to std.
+
+---
 
 *Disclaimer: the tools are not tested to work in different circumstances other than the exact described way in the thesis. It is possible that it requires adjustment to work properly for you*
 
