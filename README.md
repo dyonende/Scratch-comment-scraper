@@ -24,7 +24,7 @@ This program works almost the same as the comment scraper, but downloads and par
 Therefore, instead of heaving a number of comments as input, it takes a file with on each line "\[username\] \[projectID\] \[commentID\]", where commentID is the comment that the replies should be downloaded of.
 
 ### langanote.py
-This program has as input a csv file with the output of commentscraper.py or replyscraper.py. It analyses every comment with pycld2 and adds the language of the comment in a new column, also in csv format to stdout.
+This program has as input a csv file containing the output of commentscraper.py or replyscraper.py. It analyses every comment with pycld2 and adds the language of the comment in a new column, also in csv format to stdout.
 
 ---
 
