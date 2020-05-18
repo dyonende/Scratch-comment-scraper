@@ -4,7 +4,7 @@
 
 The goal of this research was to create a dataset that contains Scratch comments labelled with sentiment.
 The data can be found here: 
-- [sqlite3](https://drive.google.com/file/d/1roo16yDH7hUGmrYMKqIGWWTjmM1QL069/view?usp=sharing)
+- [sqlite3 database](https://drive.google.com/file/d/1roo16yDH7hUGmrYMKqIGWWTjmM1QL069/view?usp=sharing)
 - [csv](https://drive.google.com/drive/folders/1Qo1KzRfSiEqD-69peGp601XMQ59YtF9o?usp=sharing)
 
 ## tools
