@@ -1,6 +1,6 @@
 # Scratch Scraper
 
-**This repository hosts all the code that was used for the bachelor's thesis [*Scraping Scratch: A Dataset of Comments and their Sentiment (2020)*](https://github.com/dyonende/Scratch-scraper/blob/master/Thesis%20Final%20Version.pdf) by Dyon van der Ende.**
+**This repository hosts all the code that was used for the bachelor's thesis [*Scraping Scratch: A Dataset of Comments and their Sentiment (2020)*](https://github.com/dyonende/Scratch-scraper/blob/master/Thesis%20Final%20Version.pdf) by Dyon van der Ende and supervised by Fenia Aivaloglou.**
 
 The goal of this research was to create a dataset that contains Scratch comments labelled with sentiment.
 The data can be found here: 
