@@ -28,6 +28,6 @@ This program has as input a csv file containing the output of commentscraper.py 
 
 ---
 
-*Disclaimer: the tools are not tested to work in different circumstances other than the exact described way in the thesis. It is possible that it requires adjustment to work properly for you*
+*Disclaimer: the tools are not tested to work under different circumstances other than the exact described way in the thesis. It is possible that it requires adjustment to work properly for you!*
 
  
