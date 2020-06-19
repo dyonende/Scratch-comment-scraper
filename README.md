@@ -13,7 +13,7 @@ Here only a brief overview of the tools is given. For a more complete descriptio
 Also a complete description of the data can be found there.
 
 ### projectscraper.py
-This program takes a list of project id's of Scratch projects and downloads the available meta-data of the project in JSON format. This is then parsed and written to stdout in csv-format.
+This program takes a list of project ids of Scratch projects and downloads the available meta-data of the project in JSON format. This is then parsed and written to stdout in csv-format.
 
 ### commentscraper.py
 This program takes a file with on each line "\[username\] \[projectID\] \[comments\]" as input and will then download and parse the comments and meta-data of the comments and print this to stdout. 
