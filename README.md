@@ -8,7 +8,7 @@ The data can be found here:
 - [csv](https://drive.google.com/drive/folders/1Qo1KzRfSiEqD-69peGp601XMQ59YtF9o?usp=sharing)
 
 ## tools
-All tools are written in Python
+All tools are written in Python.
 Here only a brief overview of the tools is given. For a more complete description please read the Methods section in the thesis.
 Also a complete description of the data can be found there.
 
